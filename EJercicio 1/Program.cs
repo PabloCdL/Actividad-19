@@ -5,6 +5,11 @@ int edad;
 
 do
 {
+    res();
+} while (!correrto);
+    Console.WriteLine("Edad valida");
+void res()
+{
     Console.WriteLine("Ingrese sue edad");
     correrto = int.TryParse(Console.ReadLine(), out edad);
     if (correrto)
@@ -19,5 +24,4 @@ do
     {
         Console.WriteLine("No es un numero");
     }
-} while (!correrto);
-    Console.WriteLine("Edad valida");
+}

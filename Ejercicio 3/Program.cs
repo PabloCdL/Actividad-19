@@ -4,6 +4,11 @@ bool correcto;
 int alumnos;
 do
 {
+    res();
+}while (!correcto);
+Console.WriteLine($"La cantidad de alumnos es de: {alumnos}");
+void res()
+{
     Console.WriteLine("Ingrese la cantidad de alumnos");
     correcto = int.TryParse(Console.ReadLine(), out alumnos);
     if (correcto)
@@ -12,9 +17,9 @@ do
         {
             Console.WriteLine($"Valores negativo son invalidos");
         }
-    }else
+    }
+    else
     {
         Console.WriteLine("No es un numero");
     }
-}while (!correcto);
-Console.WriteLine($"La cantidad de alumnos es de: {alumnos}");
+}

@@ -5,12 +5,17 @@ DateTime fecha;
 
 do
 {
+    res();
+}while(!correcto);
+Console.WriteLine($"Valida, la fecha es: {fecha.ToShortDateString()}");
+
+void res()
+{
     Console.WriteLine("Ingrese una fecha");
-    correcto = DateTime.TryParse(Console.ReadLine(), out fecha );
-    if(!correcto)
+    correcto = DateTime.TryParse(Console.ReadLine(), out fecha);
+    if (!correcto)
     {
         Console.WriteLine("Fecha no valida");
     }
 
-}while(!correcto);
-Console.WriteLine($"Valida, la fecha es: {fecha.ToShortDateString()}");
+}

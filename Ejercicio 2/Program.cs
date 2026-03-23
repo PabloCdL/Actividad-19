@@ -6,6 +6,12 @@ double precio;
 
 do
 {
+    res();
+    
+} while (!correcto);
+Console.WriteLine("Precio valido");
+void res()
+{
     Console.WriteLine("Ingrese el precio");
     correcto = double.TryParse(Console.ReadLine(), out precio);
     if (correcto)
@@ -15,10 +21,9 @@ do
             correcto = false;
             Console.WriteLine("Precio no valido");
         }
-    }else
+    }
+    else
     {
         Console.WriteLine("No es un valor numerico");
     }
-    
-} while (!correcto);
-Console.WriteLine("Precio valido");
+}

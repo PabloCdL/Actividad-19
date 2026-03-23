@@ -5,6 +5,11 @@ bool correcto;
 DateTime fechacomparacion = new DateTime(1900, 12, 25);
 do
 {
+    res();
+}while (!correcto);
+Console.WriteLine("Fecha Valida");
+void res()
+{
     Console.WriteLine("Ingrese su edad xx/yy/zzzz");
     correcto = DateTime.TryParse(Console.ReadLine(), out Fecha);
     if (correcto)
@@ -14,9 +19,9 @@ do
             correcto = false;
             Console.WriteLine("Fecha invalida");
         }
-    }else
+    }
+    else
     {
         Console.WriteLine("No es fecha");
-    }    
-}while (!correcto);
-Console.WriteLine("Fecha Valida");
+    }
+}

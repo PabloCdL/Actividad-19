@@ -6,26 +6,34 @@ string productos;
 string Aux = "";
 do
 {
+    Leernumero();
+
+}while (!correcto);
+
+    for (int i = 1; i <= cantidad; i++)
+    {
+        Console.WriteLine($"Ingrese el producto {i}");
+        productos = Console.ReadLine();
+        Aux += productos + "\n";
+    }
+    Console.WriteLine($"La cantidad de productos es de: {cantidad}\nLos productos fueron:");
+    Console.WriteLine($"{Aux}");
+
+
+void Leernumero()
+{
     Console.WriteLine("Ingrese la cantidad de productos a comprar");
     correcto = int.TryParse(Console.ReadLine(), out cantidad);
-    if(correcto)
+    if (correcto)
     {
-        if(cantidad <= 0)
+        if (cantidad <= 0)
         {
             correcto = false;
             Console.WriteLine("Cantidad no valida");
         }
-    }else
+    }
+    else
     {
         Console.WriteLine("No es una cantidad.... malo");
     }
-
-}while (!correcto);
-for(int i = 1; i <= cantidad; i++)
-{
-    Console.WriteLine($"Ingrese el producto {i}");
-    productos = Console.ReadLine();
-    Aux += productos + "\n";
 }
-Console.WriteLine($"La cantidad de productos es de: {cantidad}\nLos productos fueron:");
-Console.WriteLine($"{Aux}");

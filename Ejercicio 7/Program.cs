@@ -6,20 +6,24 @@ double salario;
 bool correcto;
 do
 {
-    Console.WriteLine("Ingrese su salario");
-    correcto = double.TryParse(Console.ReadLine(), out salario);
-    if(correcto)
-    {
-        if(salario < 0)
-        {
-            correcto = false;
-            Console.WriteLine("Salario invalido");
-        }
-    }
-    else
-    {
-        Console.WriteLine("No es un valor numerico");
-    }
+    res();
 
 }while (!correcto);
 Console.WriteLine($"Valido, el salario es de: {salario}");
+void res()
+{ 
+        Console.WriteLine("Ingrese su salario");
+correcto = double.TryParse(Console.ReadLine(), out salario);
+if (correcto)
+{
+    if (salario < 0)
+    {
+        correcto = false;
+        Console.WriteLine("Salario invalido");
+    }
+}
+else
+{
+    Console.WriteLine("No es un valor numerico");
+}
+}

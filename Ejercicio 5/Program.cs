@@ -5,18 +5,23 @@ bool correcto;
 double numero;
 do
 {
+    res();
+}while (!correcto);
+Console.WriteLine("Par");
+void res()
+{
     Console.WriteLine("Ingrese un numero");
     correcto = double.TryParse(Console.ReadLine(), out numero);
-    if(correcto)
+    if (correcto)
     {
-        if(numero % 2 != 0)
+        if (numero % 2 != 0)
         {
             correcto = false;
             Console.WriteLine("Numero impar");
         }
-    }else
+    }
+    else
     {
         Console.WriteLine("No es un numero");
     }
-}while (!correcto);
-Console.WriteLine("Par");
+}
